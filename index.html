@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Reviews</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Alegreya:ital,wght@0,400..900;1,400..900&family=Caveat:wght@400..700&family=Momo+Trust+Display&family=Permanent+Marker&display=swap" rel="stylesheet">
+    </head>
+    <body id="body">  
+      <div class="bg-img w-100"></div>
+    <!-- sart navbar -->
+     <nav class="navbar  navbar-dark bg-dark fixed-top sticky-top rounded-pill">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center me-4" href="#">
+      <img src="images/Designer.png" alt="Logo" class="d-inline-block align-text-center">
+      Game Reviews
+    </a>
+       <ul class="navbar-nav flex-row me-center ">
+            <li class="nav-item d-flex align-items-center me-4">
+                <a class="nav-link active" href="#" data-category="mmorpg">MMORPG</a>
+            </li>
+            <li class="nav-item d-flex align-items-center me-4">
+               <a class="nav-link" href="#" data-category="shooter">SHOOTER</a>
+            </li>
+            <li class="nav-item d-flex align-items-center me-4">
+                <a class="nav-link" href="#" data-category="sailing">SAILING</a>
+            </li>
+            <li class="nav-item d-flex align-items-center me-4">
+                <a class="nav-link" href="#" data-category="permadeath">PERMADEATH</a>
+            </li>
+            <li class="nav-item d-flex align-items-center me-4">
+                <a class="nav-link" href="#" data-category="moba">MOBA</a>
+            </li>
+            <li class="nav-item d-flex align-items-center me-4">
+                <a class="nav-link" href="#" data-category="anime">ANIME</a>
+            </li>
+        </ul>
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-end text-bg-dark " tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">More Categories</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a class="nav-link" href="#" data-category="battle-royale">Battle Royale</a>
+          </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#" data-category="strategy">Strategy</a>
+          </li>
+          <li class="nav-item">
+          <a class="nav-link" href="#" data-category="fantasy">Fantasy</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" data-category="sci-fi">Sci-Fi</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" data-category="card">Card Games</a>
+        </li>
+        </ul>
+       
+      </div>
+    </div>
+    </div>
+</nav>
+    <!-- end navbar -->
+
+     <!-- start header  -->
+      <div id="carouselExampleControls" class="carousel slide " data-bs-ride="carousel">
+  <div class="carousel-inner"  id="headerCarousel">
+    
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+      <!-- end header-->
+
+    <!-- start section cart -->
+      <section id="imges-games">
+        <div class="container">
+            <div class="row" id="rowBody">
+                
+            </div>
+        </div>
+      </section>
+     <!-- end section cart -->
+    <!-- start section details -->
+     <div class="modal fade" id="exampleModal" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content bg-dark text-light">
+
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Game Details</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        <div class="row" id="modalBodyContent"></div>
+      </div>
+
+    </div>
+  </div>
+</div>
+    <!-- end section details -->
+
+     <!-- start loading -->
+      <div id="loading">
+        <span class="loader"></span>
+      </div>
+     <!-- end loading -->
+
+      <!-- start footer -->
+             <div id="footer">
+              <div class="demo text-center ">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-google"></i>
+                <i class="fa-brands fa-github"></i>
+              </div>
+              <p  class="text-center py-4">Copy Right 2025 © By <span>
+                <a href="#" class="nav-link d-inline " >
+                  Eng Fatma
+                </a>
+              </span>  All Rights Reserved</p>
+             </div>
+             <!-- end footer -->
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
